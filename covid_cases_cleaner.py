@@ -13,4 +13,4 @@ for i in range(len(df)):
     cleaned_data.append(row)
 
 result_df = pd.DataFrame(data = cleaned_data, columns = ['date', 'state', 'cases'])
-result_df.to_csv('covid_cases_cleaned.csv')
+result_df.to_csv('covid_cases_cleaned.csv', index=False)
