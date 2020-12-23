@@ -90,9 +90,10 @@ def main():
 
       # MLP Regressor
       from sklearn.neural_network import MLPRegressor
-      model = MLPRegressor(hidden_layer_sizes=(200), alpha=0.01).fit(XX, yy)
+      hidden_layer_size = 200
+      model = MLPRegressor(hidden_layer_sizes=hidden_layer_size, alpha=0.01).fit(XX, yy)
       predictions = model.predict(XX)
-      print("MLP: " + str(mean_squared_error(yy, predictions)))
+      print("MLP with hidden layer=" + str(hidden_layer_size) +": " + str(mean_squared_error(yy, predictions)))
 
 
       print("Baseline Model: ")

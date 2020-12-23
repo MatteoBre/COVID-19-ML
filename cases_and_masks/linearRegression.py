@@ -32,7 +32,7 @@ def main():
 
     q = 7
     dd = 1
-    lag = 3
+    lag = 14
     #q−step ahead prediction
     stride = 1
     XX = new_cases[0:new_cases.size - q - lag * dd:stride]
